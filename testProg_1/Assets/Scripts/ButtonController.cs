@@ -7,10 +7,12 @@ public class ButtonController : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
+        Statistics.ResetToZero();
     }
     public void Restart()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
+        Statistics.ResetToZero();
     }
 }

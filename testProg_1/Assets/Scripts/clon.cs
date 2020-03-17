@@ -4,7 +4,7 @@ using UnityEngine;
 public class clon : MonoBehaviour
 {
     List<GameObject> cubes;
-    public GameObject cube;
+    public GameObject primitiv;
     public float num;
 
     void Start()
@@ -12,7 +12,7 @@ public class clon : MonoBehaviour
         cubes = new List<GameObject>();
         for (int i = 0; i < num; i++)
         {
-            GameObject obj = Instantiate(cube);
+            GameObject obj = Instantiate(primitiv);
             obj.SetActive(false);
             cubes.Add(obj);
         }
@@ -26,7 +26,7 @@ public class clon : MonoBehaviour
                 return cubes[i];
             }
         }
-        GameObject obj = Instantiate(cube);
+        GameObject obj = Instantiate(primitiv);
         obj.SetActive(false);
         cubes.Add(obj);
         return obj;

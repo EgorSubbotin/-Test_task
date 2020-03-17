@@ -4,7 +4,7 @@ public class DestroyPoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Primitive"|| other.gameObject.tag == "Bridge")
+        if (other.gameObject.tag == "Primitive")
         {            
             other.gameObject.SetActive(false);
         }

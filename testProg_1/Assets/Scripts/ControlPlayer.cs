@@ -1,40 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class ControlPlayer : MonoBehaviour
 {
-    public static float moveSpeed = 15f;
-    Rigidbody myBody;  
+    public static float moveSpeed = 25f;
+    Rigidbody myBody;
     float mouseX;
     public float jumpForce = 1000f;
-    
+
     void Start()
     {
-        myBody = GetComponent<Rigidbody>();        
+        myBody = GetComponent<Rigidbody>();
     }
 
     void Update()
-    {      
-        if (Input.GetMouseButton(0))
+    {
+        if (!DiedPlayer.DeathPlayer)
         {
-            Vector3 down = Vector3.Project(myBody.velocity, transform.up);
+            if (Input.GetMouseButton(0))
+            {
+                Vector3 down = Vector3.Project(myBody.velocity, transform.up);
 
-            Vector3 forward = transform.forward * moveSpeed;
-            
-            myBody.velocity = down+ forward;
-                       
-            mouseX = +Input.GetAxis("Mouse X") *2;
-            
-            transform.Rotate(new Vector3(0,1,0), mouseX);                
-        }        
+                Vector3 forward = transform.forward * moveSpeed;
+
+                myBody.velocity = down + forward;
+
+                mouseX = +Input.GetAxis("Mouse X") * 2;
+
+                transform.Rotate(new Vector3(0, 1, 0), mouseX);
+            }
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Planet")
         {
-            myBody.AddForce(transform.up * jumpForce);            
+            myBody.AddForce(transform.up * jumpForce);
         }
     }
 }

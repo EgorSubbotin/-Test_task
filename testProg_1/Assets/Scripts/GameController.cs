@@ -3,7 +3,6 @@
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
-
     
     const string MY_SCORE = "MyScore";
     void Start()

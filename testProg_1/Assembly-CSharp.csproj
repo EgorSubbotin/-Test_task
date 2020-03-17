@@ -64,19 +64,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ButtonController.cs" />
-    <Compile Include="Assets\Scripts\CameraMain.cs" />
-    <Compile Include="Assets\Scripts\CheckGeneration.cs" />
-    <Compile Include="Assets\Scripts\CheckStart.cs" />
+    <Compile Include="Assets\Scripts\CheckDown.cs" />
     <Compile Include="Assets\Scripts\clon.cs" />
     <Compile Include="Assets\Scripts\ControlPlayer.cs" />
+    <Compile Include="Assets\Scripts\CreateObject.cs" />
     <Compile Include="Assets\Scripts\DestroyPoint.cs" />
     <Compile Include="Assets\Scripts\DiedPlayer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GeneraterPoint.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ParticleColor.cs" />
     <Compile Include="Assets\Scripts\Planet.cs" />
     <Compile Include="Assets\Scripts\PlanetConstrain.cs" />
+    <Compile Include="Assets\Scripts\Statistics.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity/Task/testProg_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

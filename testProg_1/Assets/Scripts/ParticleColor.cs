@@ -16,9 +16,9 @@ public class ParticleColor : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space)|| CheckStart.start)
+        if (Statistics.changeColor)
         {
-            CheckStart.start = false;            
+            Statistics.changeColor = false;            
             int r = Random.Range(0, colors.Length);
             int g = Random.Range(0, colors.Length);
             
